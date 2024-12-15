@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get in Touch</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="contactForm">
+            <div class="form-container">
+                <div class="form-section">
+                    <div class="form-header">Get in Touch!</div>
+                    
+                    <div class="form-group">
+                        <label>First Name <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">👤</div>
+                            <input type="text" class="input-field" id="firstName" placeholder="First name" required>
+                        </div>
+                        <div class="error-message">First name is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Last Name <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">👤</div>
+                            <input type="text" class="input-field" id="lastName" placeholder="last name" required>
+                        </div>
+                        <div class="error-message">Last name is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact Number <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">📱</div>
+                            <input type="tel" class="input-field" id="contactNumber" placeholder="Contact number" required>
+                        </div>
+                        <div class="error-message">Contact number is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email Address <span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">✉️</div>
+                            <input type="email" class="input-field" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="error-message">Email is required</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Purpose of Enquiry <span class="required">*</span> </label>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="purpose" value="mortgage" checked>
+                                I need mortgage advice
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="purpose" value="collaborate">
+                                I would like to collaborate
+                            </label>
+                        </div>
+                        <div class="checkbox-group">
+                            <label>
+                                <input type="checkbox" name="purpose" value="feedback">
+                                I would like to provide some feedback
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea class="input-field" id="message" ></textarea>
+                        
+                    </div>
+
+                    <div class="privacy-notice">
+                        The Loan Connection is committed to protecting and respecting your privacy, and we'll only use your personal information to administer your account and to provide the products and services you requested from us. By clicking submit below, you consent to allow The Loan Connection to store and process the personal information submitted above to provide you the content requested.
+                    </div>
+                    <div class="form-group">
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="terms" required>
+                            I have read and agree to TLC's Terms of Use & Privacy Notice
+                        </label>
+                        <div class="error-message">You must agree to the terms</div>
+                    </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+
+                <div class="form-section">
+                    <div class="business-info">
+                        <div class="business-name">The Loan Connection | Mortgage Broker</div>
+                        <div class="business-rating">
+                            <span class="stars">★★★★★</span>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Address:</span>
+                            <span>1 Fullerton Rd, #02-01, Singapore 049213</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Email:</span>
+                            <span>enquiry@theloanconnection.com.sg</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Contact:</span>
+                            <span>+65 8138 5611</span>
+                        </div>
+                    </div>
+                    
+                    <div id="map" class="map-container"></div>
+                </div>
+            </div>
+        </form>
+        <!-- Add this HTML right after your form closing tag -->
+<div class="loading-spinner">
+    <div class="spinner"></div>
+</div>
+<div class="feedback-message"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCf2MwtSVgBydvdGJWIxMTEqqRt-fsaf0M&callback=initMap" async defer></script>
+</body>
+</html>
